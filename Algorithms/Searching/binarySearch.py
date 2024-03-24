@@ -16,7 +16,3 @@ if __name__ == "__main__":
     target = 12
     index = binarySearch(arr,0,len(arr)-1,target)
     print(index)
-
-    git config --global user.name "Abhishek J"
-
-git config --global user.email "jabhishek215@gmail.com"
