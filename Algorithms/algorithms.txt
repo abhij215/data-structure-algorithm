@@ -1,0 +1,313 @@
+What is an Algorithm?
+The word Algorithm means "A set of rules to be followed in calculations or other problem-solving 
+operations” Or “A procedure for solving a mathematical problem in a finite number of steps that 
+frequently involves recursive operations "
+
+
+Types of Algorithms:(important)
+
+1. Brute Force Algorithm: It is the simplest approach for a problem. A brute force algorithm 
+is the first approach that comes to finding when we see a problem.
+
+2. Recursive Algorithm: A recursive algorithm is based on recursion. In this case, a problem 
+is broken into several sub-parts and called the same function again and again.
+
+3. Backtracking Algorithm: The backtracking algorithm basically builds the solution by 
+searching among all possible solutions. Using this algorithm, we keep on building the solution 
+following criteria. Whenever a solution fails we trace back to the failure point and build on the 
+next solution and continue this process till we find the solution or all possible solutions are 
+looked after.
+
+4. Searching Algorithm: Searching algorithms are the ones that are used for searching elements 
+or groups of elements from a particular data structure. They can be of different types based on 
+their approach or the data structure in which the element should be found.
+
+5. Sorting Algorithm: Sorting is arranging a group of data in a particular manner according to 
+the requirement. The algorithms which help in performing this function are called sorting algorithms. 
+Generally sorting algorithms are used to sort groups of data in an increasing or decreasing manner.
+
+6. Hashing Algorithm: Hashing algorithms work similarly to the searching algorithm. But they contain 
+an index with a key ID. In hashing, a key is assigned to specific data.
+
+7. Divide and Conquer Algorithm: This algorithm breaks a problem into sub-problems, solves a single 
+sub-problem and merges the solutions together to get the final solution. It consists of the following 
+three steps:
+
+Divide
+Solve
+Combine
+
+8. Greedy Algorithm: In this type of algorithm the solution is built part by part. The solution 
+of the next part is built based on the immediate benefit of the next part. The one solution giving 
+the most benefit will be chosen as the solution for the next part.
+
+9. Dynamic Programming Algorithm: This algorithm uses the concept of using the already found 
+solution to avoid repetitive calculation of the same part of the problem. It divides the problem 
+into smaller overlapping subproblems and solves them.
+
+10. Randomized Algorithm: In the randomized algorithm we use a random number so it gives 
+immediate benefit. The random number helps in deciding the expected outcome.
+
+
+
+
+
+
+
+
+
+
+4. Searching Algorithm
+======================
+Searching Algorithms are designed to check for an element or retrieve an element from any 
+data structure where it is stored.
+
+Important searching algorithms:
+------------------------------
+4.1 Linear Search:
+------------------
+Linear Search is defined as a sequential search algorithm that starts at one end and goes 
+through each element of a list until the desired element is found, otherwise the search continues 
+till the end of the data set.
+
+Time Complexity : O(N)
+Auxilary space : O(1)
+
+Advantages of Linear Search:
+>> can be used irrespective of whether the array is sorted or not. 
+   It can be used on arrays of any data type.
+>> Does not require any additional memory.
+>> It is a well-suited algorithm for small datasets.
+
+Drawbacks of Linear Search:
+>> Linear search has a time complexity of O(N), which in turn makes it slow for large datasets.
+>> Not suitable for large arrays.
+
+
+4.2 Binary Search
+-----------------
+Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing 
+the search interval in half. The idea of binary search is to use the information that the array 
+is sorted and reduce the time complexity to O(log N). 
+
+Time Complexity : O(logN)
+Auxilary Space : iterative : O(1)      Recursive: O(logN)
+
+Advantage:
+>> faster, more efficient, and well suited for large datasets
+
+Disadvantages:
+>> must be sorted
+>> needs randam access
+
+
+
+
+
+5.Sorting
+==========
+A Sorting Algorithm is used to rearrange a given array or list of elements according to a 
+comparison operator on the elements. The comparison operator is used to decide the new order 
+of elements in the respective data structure.
+
+Important Sorting technique:
+1. QuickSort
+2. Merge Sort
+3. Selection Sort
+4. Insertion Sort
+5. Bubble Sort
+6. Heap Sort
+
+
+Selection Sort >> in-place and not stable
+==============
+Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting 
+the smallest (or largest) element from the unsorted portion of the list and moving it to the 
+sorted portion of the list.
+
+How does it work?
+The algorithm repeatedly selects the smallest (or largest) element from the unsorted portion 
+of the list and swaps it with the first element of the unsorted part. This process is repeated 
+for the remaining unsorted portion until the entire list is sorted.
+
+Time Complexity: O(N2)
+Auxilary Space : O(1)
+
+Advantages: simple, easy and works well on small datasets
+Disadvantages: O(N2) time complexity, not suitable for large datasets, not stable as does not preserve
+                the relative order of items with equal keys
+
+Frequently Asked Questions on Selection Sort
+Q1. Is Selection Sort Algorithm stable?
+>> The default implementation of the Selection Sort Algorithm is not stable. However, it can be made stable. Please see the stable Selection Sort for details.
+
+Q2. Is Selection Sort Algorithm in-place?
+>> Yes, Selection Sort Algorithm is an in-place algorithm, as it does not require extra space.
+
+
+Bubble Sort(Sinking Sort)
+===========
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent 
+elements if they are in the wrong order. This algorithm is not suitable for large data sets as 
+its average and worst-case time complexity is quite high.
+
+How does it work?
+In this algorithm,
+>> traverse from left and compare adjacent elements and the higher one is placed at right side. 
+>> In this way, the largest element is moved to the rightmost end at first. 
+>> This process is then continued to find the second largest and place it and so on until the data is 
+    sorted.
+
+Complexity Analysis
+--------------------
+Time Complexity: O(N2)
+Auxiliary Space: O(1)
+
+Advantages
+-----------
+>> easy to understand and implement.
+>> additional memory space.
+>> It is a stable sorting algorithm, meaning that elements with the same key value maintain 
+   their relative order in the sorted output.
+
+Disadvantages
+-------------
+>> time complexity of O(N2) which makes it very slow for large data sets.
+>> Bubble sort is a comparison-based sorting algorithm, which means that it requires a 
+  comparison operator to determine the relative order of elements in the input data set. 
+  It can limit the efficiency of the algorithm in certain cases.
+
+
+Some FAQs related to Bubble Sort:
+What is the Boundary Case for Bubble sort? 
+>> Bubble sort takes minimum time (Order of n) when elements are already sorted. 
+Hence it is best to check if the array is already sorted or not beforehand, to 
+avoid O(N2) time complexity.
+
+Does sorting happen in place in Bubble sort?
+>> Yes, Bubble sort performs the swapping of adjacent pairs without the use of any 
+major data structure. Hence Bubble sort algorithm is an in-place algorithm.
+
+Is the Bubble sort algorithm stable?
+>> Yes, the bubble sort algorithm is stable.
+
+Where is the Bubble sort algorithm used?
+>> Due to its simplicity, bubble sort is often used to introduce the concept of a sorting algorithm. 
+In computer graphics, it is popular for its capability to detect a tiny error (like a swap of just
+two elements) in almost-sorted arrays and fix it with just linear complexity (2n). 
+
+Example: It is used in a polygon filling algorithm, where bounding lines are sorted by their x 
+coordinate at a specific scan line (a line parallel to the x-axis), and with incrementing y their 
+order changes (two elements are swapped) only at intersections of two lines.
+
+  
+
+Insertion Sort
+==============
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards 
+in your hands. The array is virtually split into a sorted and an unsorted part. Values from the 
+unsorted part are picked and placed at the correct position in the sorted part.
+
+Insertion Sort Algorithm
+To sort an array of size N in ascending order iterate over the array and compare the current element 
+(key) to its predecessor, if the key element is smaller than its predecessor, compare it to the 
+elements before. Move the greater elements one position up to make space for the swapped element.
+
+Time Complexity: O(N2)
+Auxilary Space : O(1)
+
+Characteristics of Insertion Sort
+----------------------------------
+>> simplest algorithms with a simple implementation
+>> efficient for small data values
+>> Insertion sort is adaptive in nature, i.e. it is appropriate for data sets that are already 
+partially sorted.
+
+Frequently Asked Questions on Insertion Sort
+--------------------------------------------
+Q1. What are the Boundary Cases of the Insertion Sort algorithm?
+>> Insertion sort takes the maximum time to sort if elements are sorted in reverse order. 
+And it takes minimum time (Order of n) when elements are already sorted. 
+
+Q2. What is the Algorithmic Paradigm of the Insertion Sort algorithm?
+>> The Insertion Sort algorithm follows an incremental approach.
+
+Q3. Is Insertion Sort an in-place sorting algorithm?
+>> Yes, insertion sort is an in-place sorting algorithm.
+
+Q4. Is Insertion Sort a stable algorithm?
+>> Yes, insertion sort is a stable sorting algorithm.
+
+Q5. When is the Insertion Sort algorithm used?
+>> Insertion sort is used when number of elements is small. It can also be useful when 
+the input array is almost sorted, and only a few elements are misplaced in a complete big array.
+
+
+
+MergeSort
+=========
+Merge sort is defined as a sorting algorithm that works by dividing an array into smaller subarrays, 
+sorting each subarray, and then merging the sorted subarrays back together to form the final sorted array.
+
+How does Merge Sort work?
+Merge sort is a recursive algorithm that continuously splits the array in half until it cannot be 
+further divided i.e., the array has only one element left (an array with one element is always sorted). 
+Then the sorted subarrays are merged into one sorted array.
+
+Time Complexity: O(N log(N))
+Space Complexity : O(N)
+
+Applications of Merge Sort:
+----------------------------
+>> Sorting large datasets, guaranteed worst-case time complexity of O(n log n).
+>> External sorting, where the data to be sorted is too large to fit into memory.
+>> Custom sorting, such as partially sorted, nearly sorted, or completely unsorted data.
+
+Advantages of Merge Sort:
+--------------------------
+>> Stability: Merge sort is a stable sorting algorithm.
+>> Guaranteed worst-case performance: O(N logN).
+>> Parallelizable: Merge sort is a naturally parallelizable algorithm.
+
+Drawbacks of Merge Sort:
+------------------------
+>> Space complexity: Merge sort requires additional memory to store the merged sub-arrays 
+   during the sorting process. 
+>> Not in-place: Merge sort is not an in-place sorting algorithm.
+>> Not always optimal for small datasets.
+
+
+QuickSort
+---------
+QuickSort is a sorting algorithm based on the Divide and Conquer algorithm that picks an 
+element as a pivot and partitions the given array around the picked pivot by placing the 
+pivot in its correct position in the sorted array.
+
+How does QuickSort work?
+The key process in quickSort is a partition(). The target of partitions is to place the 
+pivot (any element can be chosen to be a pivot) at its correct position in the sorted 
+array and put all smaller elements to the left of the pivot, and all greater elements to 
+the right of the pivot.
+
+Partition is done recursively on each side of the pivot after the pivot is placed in its 
+correct position and this finally sorts the array.
+
+Time Complexity : O(N2)
+Auxilary Space : O(1)
+
+Advantages of Quick Sort:
+-------------------------
+>> It is a divide-and-conquer algorithm that makes it easier to solve problems.
+>> It is efficient on large data sets.
+>> It has a low overhead, as it only requires a small amount of memory to function.
+
+Disadvantages of Quick Sort:
+----------------------------
+>> It has a worst-case time complexity of O(N2)
+>> It is not a good choice for small data sets.
+>> It is not a stable sort, meaning that if two elements have the same key, 
+   their relative order will not be preserved in the sorted output in case 
+   of quick sort, because here we are swapping elements according to the pivot’s 
+   position (without considering their original positions).
+
+   

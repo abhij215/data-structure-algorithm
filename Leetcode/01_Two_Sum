@@ -1,0 +1,16 @@
+def twosum(arr, target):
+    hasmap = {}
+
+    i = 0
+    while i < len(arr):
+        con = target - arr[i]
+        if con in hasmap:
+            return [i, hasmap[con]]
+        hasmap[arr[i]] = i
+        i += 1
+
+if __name__ == "__main__":
+    arr = [6,7,3,8]
+    target = 10
+    index = twosum(arr,target)
+    print(index)

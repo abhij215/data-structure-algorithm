@@ -1,0 +1,236 @@
+What is Data Structure:
+-----------------------
+A data structure is a storage that is used to store and organize data. 
+It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
+processing, retrieving, and storing data
+
+Classification of Data Structure: 
+1) Linear data structure
+    - data elements are arranged sequentially or linearly, where each element is attached to its 
+      previous and next adjacent elements, is called a linear data structure.   
+    Ex: array, stack, queue, linked list, etc.
+
+    1.1) Static data structure: 
+        -   it has a fixed memory size. easier to access the elements in a static data structure. 
+            Ex: array
+
+    1.2) Dynamic data structure: 
+        -   The size is not fixed. It can be randomly updated during the runtime. 
+            Ex: queue, stack, etc.
+
+2) Non-linear data structure: 
+    - data elements are not placed sequentially or linearly are called non-linear data structures. 
+      In a non-linear data structure, we can’t traverse all the elements in a single run only. 
+    Ex: trees and graphs.
+
+
+Array Data structure:
+---------------------
+What is an Array?
+An array is a collection of items of the same variable type that are stored at contiguous memory 
+locations. It’s one of the most popular and simple data structures and is often used to implement 
+other data structures. Each item in an array is indexed starting with 0.
+
+Why Array Data Structures is needed?
+The idea of an array is to represent many instances in one variable..
+
+
+
+Linked list
+-----------
+Linked List is a linear data structure, in which elements are not stored at a contiguous location, 
+rather they are linked using pointers. Linked List forms a series of connected nodes, where each 
+node stores the data and the address of the next node.
+
+Node Structure: A node in a linked list typically consists of two components:
+1) Data: It holds the actual value or data associated with the node.
+2) Next Pointer: It stores the memory address (reference) of the next node in the sequence.
+Head and Tail: The linked list is accessed through the head node, which points to the first node 
+in the list. The last node in the list points to NULL or nullptr, indicating the end of the list. 
+This node is known as the tail node.
+
+why is it needed ?
+1) Dynamic Data structure: The size of memory can be allocated or de-allocated at run time based 
+   on the operation insertion or deletion.
+2) Ease of Insertion/Deletion: The insertion and deletion of elements are simpler than arrays since 
+   no elements need to be shifted after insertion and deletion, Just the address needed to be updated.
+3) Efficient Memory Utilization: As we know Linked List is a dynamic data structure the size increases 
+   or decreases as per the requirement so this avoids the wastage of memory. 
+4) Implementation: Various advanced data structures can be implemented using a linked list like a stack, 
+   queue, graph, hash maps, etc.
+
+
+
+Types of linked lists: 
+----------------------
+1) Single-linked list
+2) Double linked list
+3) Circular linked list
+
+1. Single-linked list:
+----------------------
+In a singly linked list, each node contains a reference to the next node in the sequence. 
+Traversing a singly linked list is done in a forward direction.
+
+2. Double-linked list:
+----------------------
+In a doubly linked list, each node contains references to both the next and previous nodes. 
+This allows for traversal in both forward and backward directions, but it requires additional 
+memory for the backward reference.
+
+3. Circular linked list:
+------------------------
+In a circular linked list, the last node points back to the head node, creating a circular structure. 
+It can be either singly or doubly linked.
+
+Operations on Linked Lists
+==========================
+1) Insertion: Adding a new node to a linked list involves adjusting the pointers of the existing 
+   nodes to maintain the proper sequence. Insertion can be performed at the beginning, end, or 
+   any position within the list
+2) Deletion: Removing a node from a linked list requires adjusting the pointers of the neighboring 
+   nodes to bridge the gap left by the deleted node. Deletion can be performed at the beginning, 
+   end, or any position within the list.
+3) Searching: Searching for a specific value in a linked list involves traversing the list 
+   from the head node until the value is found or the end of the list is reached.
+
+Advantages of Linked Lists
+===========================
+1) Dynamic Size: Linked lists can grow or shrink dynamically, as memory allocation is done at runtime.
+2) Insertion and Deletion: Adding or removing elements from a linked list is efficient, especially for 
+   large lists.
+3) Flexibility: Linked lists can be easily reorganized and modified without requiring a contiguous 
+   block of memory.
+
+Disadvantages of Linked Lists
+=============================
+1) Random Access: Unlike arrays, linked lists do not allow direct access to elements by index. 
+   Traversal is required to reach a specific node.
+2) Extra Memory: Linked lists require additional memory for storing the pointers, compared to arrays.
+
+Conclusion:
+===========
+Linked lists are versatile data structures that provide dynamic memory allocation and efficient 
+insertion and deletion operations. Understanding the basics of linked lists is essential for any programmer 
+or computer science enthusiast. With this knowledge, you can implement linked lists to solve various problems 
+and expand your understanding of data structures and algorithms.
+
+
+
+3) stack
+=========
+Stack is a linear data structure that follows a particular order in which the operations are performed. 
+The order may be LIFO(Last In First Out) or FILO(First In Last Out). LIFO implies that the element that is 
+inserted last, comes out first and FILO implies that the element that is inserted first, comes out last.
+
+A stack is a linear data structure in which the insertion of a new element and removal of an existing 
+element takes place at the same end represented as the top of the stack.
+
+Basic Operations on Stack
+In order to make manipulations in a stack, there are certain operations provided to us.
+
+push() to insert an element into the stack
+pop() to remove an element from the stack
+top() Returns the top element of the stack.
+isEmpty() returns true if stack is empty else false.
+size() returns the size of stack.
+
+Types of Stacks:
+================
+1)Fixed Size Stack: As the name suggests, a fixed size stack has a fixed size and cannot grow or shrink dynamically. 
+If the stack is full and an attempt is made to add an element to it, an overflow error occurs. If the stack is 
+empty and an attempt is made to remove an element from it, an underflow error occurs.
+
+2)Dynamic Size Stack: A dynamic size stack can grow or shrink dynamically. When the stack is full, it automatically 
+increases its size to accommodate the new element, and when the stack is empty, it decreases its size. This type 
+of stack is implemented using a linked list, as it allows for easy resizing of the stack.
+
+In addition to these two main types, there are several other variations of Stacks, including:
+----------------------------------------------------------------------------------------------
+>>Infix to Postfix Stack: This type of stack is used to convert infix expressions to postfix expressions.
+>>Expression Evaluation Stack: This type of stack is used to evaluate postfix expressions.
+>>Recursion Stack: This type of stack is used to keep track of function calls in a computer program and to 
+   return control to the correct function when a function returns.
+>>Memory Management Stack: This type of stack is used to store the values of the program counter and the values 
+   of the registers in a computer program, allowing the program to return to the previous state when a function returns.
+>>Balanced Parenthesis Stack: This type of stack is used to check the balance of parentheses in an expression.
+>>Undo-Redo Stack: This type of stack is used in computer programs to allow users to undo and redo actions.
+
+Applications of the stack:
+--------------------------
+>> Infix to Postfix /Prefix conversion
+>> Redo-undo features at many places like editors, photoshop.
+>> Forward and backward features in web browsers
+>> Used in many algorithms like Tower of Hanoi, tree traversals, stock span problems, and histogram problems.
+>> Backtracking is one of the algorithm designing techniques. Some examples of backtracking are the Knight-Tour problem, 
+N-Queen problem, find your way through a maze, and game-like chess or checkers in all these problems we dive into 
+someway if that way is not efficient we come back to the previous state and go into some another path. To get back 
+from a current state we need to store the previous state for that purpose we need a stack.
+>>In Graph Algorithms like Topological Sorting and Strongly Connected Components
+>> In Memory management, any modern computer uses a stack as the primary management for a running purpose. 
+Each program that is running in a computer system has its own memory allocations
+>> String reversal is also another application of stack. Here one by one each character gets inserted into the 
+  stack. So the first character of the string is on the bottom of the stack and the last element of a string 
+   is on the top of the stack. After Performing the pop operations on the stack we get a string in reverse order.
+>> Stack also helps in implementing function call in computers. The last called function is always completed first.
+>> Stacks are also used to implement the undo/redo operation in text editor.
+
+
+Benefits of implementing a stack using a singly linked list include:
+---------------------------------------------------------------------
+Dynamic memory allocation: The size of the stack can be increased or decreased dynamically by adding or 
+removing nodes from the linked list, without the need to allocate a fixed amount of memory for the stack upfront.
+
+Efficient memory usage: Since nodes in a singly linked list only have a next pointer and not a prev pointer, 
+they use less memory than nodes in a doubly linked list.
+
+Easy implementation: Implementing a stack using a singly linked list is straightforward and can be done using 
+just a few lines of code.
+
+Versatile: Singly linked lists can be used to implement other data structures such as queues, linked lists, 
+and trees.
+
+In summary, implementing a stack using a singly linked list is a simple and efficient way to create a dynamic 
+stack data structure in Python.
+
+
+
+Real time examples of stack:
+============================
+Stacks are used in various real-world scenarios where a last-in, first-out (LIFO) data structure is required. 
+Here are some examples of real-time applications of stacks:
+
+Function call stack: When a function is called in a program, the return address and all the function parameters 
+are pushed onto the function call stack. The stack allows the function to execute and return to the caller function 
+in the reverse order in which they were called.
+
+Undo/Redo operations: In many applications, such as text editors, image editors, or web browsers, the undo and 
+redo functionalities are implemented using a stack. Every time an action is performed, it is pushed onto the stack. 
+When the user wants to undo the last action, the top element of the stack is popped and the action is reversed.
+
+Browser history: Web browsers use stacks to keep track of the pages visited by the user. Every time a new page 
+is visited, its URL is pushed onto the stack. When the user clicks the “Back” button, the last visited URL is 
+popped from the stack and the user is directed to the previous page.
+
+Expression evaluation: Stacks are used in compilers and interpreters to evaluate expressions. When an expression 
+is parsed, it is converted into postfix notation and pushed onto a stack. The postfix expression is then evaluated 
+using the stack.
+
+Call stack in recursion: When a recursive function is called, its call is pushed onto the stack. The function 
+executes and calls itself, and each subsequent call is pushed onto the stack. When the recursion ends, the stack 
+is popped, and the program returns to the previous function call.
+
+
+Monotonic stack\
+----------------
+It is a variation of the regular stack data structure that maintains either an increasing 
+or decreasing order of elements.
+
+Applications
+-------------
+- next greater or smaller element
+- the nearest smaller element on the left or right side of an array element
+- finding the maximum area of a histogram
+- solving the sliding window maximum problem.
+
+
