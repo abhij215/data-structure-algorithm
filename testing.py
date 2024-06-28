@@ -1,65 +1,83 @@
 
-def partition(arr, low, high):
-    pivot = arr[low]
-    start = low + 1
-    end = high
+def recsum(arr):
 
-    while True:
-
-        while start <= end and arr[start] <= pivot:
-            start += 1
-        while start <= end and arr[end] >= pivot:
-            end -= 1
-        
-        if start <= end:
-            arr[start], arr[end] = arr[end], arr[start]
-        else:
-            break
+    if len(arr) == 1:
+        return arr[0]
     
-    arr[low], arr[end] = arr[end], arr[low]
+    ans = arr[0] + recsum(arr[1:])
 
-    return end
+    return ans
 
-def quickSort(arr, low, high):
-    if low < high:
-        pos = partition(arr, low, high)
-        quickSort(arr, low, pos - 1)
-        quickSort(arr, pos + 1, high)
+def recserach(arr,target,N):
 
-
-def selectionSort(arr,n):
-
-    for i in range(n):
-        start_element = i
-        for j in range(i+1, n):
-            if arr[start_element] > arr[j]:
-                start_element = j
-            
-        arr[i], arr[start_element] = arr[start_element], arr[i]
-
-
-def insertionSort(arr,n):
-    for i in range(1,n):
-        start_element = arr[i]
-        j = i-1
-        while j >= 0 and start_element < arr[j]:
-            arr[j+1] = arr[j]
-            j -= 1
-        arr[j+1] = start_element
+    if N == 0:
+        return False
     
-    return arr
+    if arr[0] == target:
+        return True
+    
+    return recserach(arr[1:], target, N-1)
+
+
+def recurswap(arr, start, end):
+
+    if start >= end:
+        return
+    
+    arr[start], arr[end] = arr[end], arr[start]
+
+    recurswap(arr, start+1, end-1)
+
+def binarysearc(arr, target, l, r):
+
+    mid = (l+r)//2
+
+    if arr[mid] == target:
+        return True
+    elif arr[mid] > target:
+        return binarysearc(arr, target, l, mid-1)
+    else:
+        return binarysearc(arr, target, mid+1, r)
+
+    return False    
+
+def powerf(a,b):
+
+    if b == 0:
+        return 1
+    
+    if b == 1:
+        return a
+    
+    ans = powerf(a, b//2)
+
+    if b%2 == 1:
+        return a * ans * ans
+    else:
+        return ans*ans
 
 if __name__ == "__main__":
-    
-    arr = [5,14,58,4,79,22,14,56,48,45]
+    a = 2
+    b = 5
 
-    print(arr)
+    ans = print(powerf(a,b))
 
-    quickSort(arr, 0, len(arr)-1)
+    #print(ans)
 
-    print(arr)
-
-    #print(insertionSort(arr, len(arr)))
-
-    #selectionSort(arr, len(arr))
+    #arr = [3,1,5,7,12]
     #print(arr)
+
+    #ans = binarysearc(arr, 5, 0, len(arr)-1)
+
+    #print(ans)
+
+
+    #print(len(arr[1:]))
+
+    #recurswap(arr, 0, len(arr)-1)
+
+    #print(arr)
+
+    #target = 1
+
+    #print(recserach(arr, target, len(arr)-1))

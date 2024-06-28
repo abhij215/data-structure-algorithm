@@ -3,6 +3,17 @@ def indexSearch(arr, target):
         for i in range(len(arr)):
             if arr[i] == target:
                 return i
+            
+def recursionsearch(arr, target, N):
+
+    ## base class
+    if N == 0:
+        return False
+    
+    if arr[0] == target:
+        return True
+    
+    return recursionsearch(arr[1:], target, N-1)
 
 
 if __name__ == "__main__":

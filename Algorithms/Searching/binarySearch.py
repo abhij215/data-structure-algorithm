@@ -10,6 +10,20 @@ def binarySearch(arr,l,h,target):
         else:
             h =  mid - 1
 
+def recusriveBinarySearch(arr, target, l, r):
+
+    mid = (l+r)//2
+
+    if arr[mid] == target:
+        return True
+    elif arr[mid] > target:
+        return recusriveBinarySearch(arr, target, l, mid-1)
+    else:
+        return recusriveBinarySearch(arr, target, mid+1, r)
+    
+    return False
+
+
 
 if __name__ == "__main__":
     arr = [10,12,13,14,15,16,17,18,19,20,21,22,23,24,25]

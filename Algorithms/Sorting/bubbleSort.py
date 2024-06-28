@@ -1,4 +1,7 @@
+"""Bubble Sort, a basic sorting algorithm, operates by repeatedly swapping adjacent elements if they are incorrectly ordered.
 
+Time Complexity: O(N2)
+Space Complexity: O(1)"""
 
 def bubbleSort(arr):
     n = len(arr)
